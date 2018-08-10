@@ -1,0 +1,24 @@
+{
+  "name": "petsfriendapp",
+  "version": "1.0.0",
+  "description": "The App for someone who has pet and want find service for him ",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Arthur Aleqsanyan1",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^3.6.1",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}

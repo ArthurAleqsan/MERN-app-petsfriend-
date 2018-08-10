@@ -1,0 +1,32 @@
+.navigation-top{
+  position: fixed; // to stay on top lmao
+  background-color: #000;
+  z-index: 1; // added to appear  on the select box"
+  width: 100%; // cuz it became small
+  height: 60px;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+  &-container{
+    display:flex ;
+    justify-content: space-around;
+    li{
+      list-style-type: none;
+      padding: 20px;
+      font-size: 20px;
+    }
+  }
+  &-item{
+    text-decoration: none;
+    color: #fff;
+  }
+  &-item:hover{
+
+    background-color: rgba(48, 48, 48, 0.75);
+  }
+
+
+}
+.active{
+  color: red;
+  //background-color: rgba(48, 48, 48, 0.75);
+}

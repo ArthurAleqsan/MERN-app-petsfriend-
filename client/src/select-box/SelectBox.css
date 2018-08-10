@@ -1,0 +1,46 @@
+.select-box {
+  width: 60vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  position: relative;
+  height: 250px;
+  display: flex; }
+  .select-box-animal-or-choose {
+    width: 11vw;
+    margin: 0 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out; }
+  .select-box-animal-title {
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize; }
+  .select-box-services {
+    border-top: 10px solid #AD2;
+    margin-top: 10px;
+    flex-direction: column; }
+    .select-box-services-icons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 82px; }
+    .select-box-services-names {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      color: white;
+      font-size: 20px; }
+
+.select-box-animal-or-choose:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: .5s all;
+  z-index: 10; }
+
+.actived {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(150, 180, 50, 0.5);
+  transition: .5s all;
+  z-index: 10; }
