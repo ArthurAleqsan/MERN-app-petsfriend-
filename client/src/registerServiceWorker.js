@@ -1,4 +1,4 @@
-// In production, we register a service worker to serve assets from local cache.
+// In production, we register a select-box-service worker to serve assets from local cache.
 
 // This lets the app load faster on subsequent visits in production, and gives
 // it offline capabilities. However, it also means that developers (and users)
@@ -23,7 +23,7 @@ export default function register() {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location);
     if (publicUrl.origin !== window.location.origin) {
-      // Our service worker won't work if PUBLIC_URL is on a different origin
+      // Our select-box-service worker won't work if PUBLIC_URL is on a different origin
       // from what our page is served on. This might happen if a CDN is used to
       // serve assets; see https://github.com/facebookincubator/create-react-app/issues/2374
       return;
@@ -33,19 +33,19 @@ export default function register() {
       const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
 
       if (isLocalhost) {
-        // This is running on localhost. Lets check if a service worker still exists or not.
+        // This is running on localhost. Lets check if a select-box-service worker still exists or not.
         checkValidServiceWorker(swUrl);
 
         // Add some additional logging to localhost, pointing developers to the
-        // service worker/PWA documentation.
+        // select-box-service worker/PWA documentation.
         navigator.serviceWorker.ready.then(() => {
           console.log(
-            'This web app is being served cache-first by a service ' +
+            'This web app is being served cache-first by a select-box-service ' +
               'worker. To learn more, visit https://goo.gl/SC7cgQ'
           );
         });
       } else {
-        // Is not local host. Just register service worker
+        // Is not local host. Just register select-box-service worker
         registerValidSW(swUrl);
       }
     });
@@ -77,20 +77,20 @@ function registerValidSW(swUrl) {
       };
     })
     .catch(error => {
-      console.error('Error during service worker registration:', error);
+      console.error('Error during select-box-service worker registration:', error);
     });
 }
 
 function checkValidServiceWorker(swUrl) {
-  // Check if the service worker can be found. If it can't reload the page.
+  // Check if the select-box-service worker can be found. If it can't reload the page.
   fetch(swUrl)
     .then(response => {
-      // Ensure service worker exists, and that we really are getting a JS file.
+      // Ensure select-box-service worker exists, and that we really are getting a JS file.
       if (
         response.status === 404 ||
         response.headers.get('content-type').indexOf('javascript') === -1
       ) {
-        // No service worker found. Probably a different app. Reload the page.
+        // No select-box-service worker found. Probably a different app. Reload the page.
         navigator.serviceWorker.ready.then(registration => {
           registration.unregister().then(() => {
             window.location.reload();

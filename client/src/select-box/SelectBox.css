@@ -4,7 +4,8 @@
   margin: 0 auto;
   position: relative;
   height: 250px;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
   .select-box-animal-or-choose {
     width: 11vw;
     margin: 0 5px;

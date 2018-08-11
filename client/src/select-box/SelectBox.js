@@ -1,20 +1,16 @@
 import React, {Component} from 'react';
 
 import './SelectBox.css';
+import Services from "../select-box-service/Services";
 
 export default class SelectBox extends Component {
-    // constructor(){
-    //     super();
-    // }
     state = {
-        id : null
+        id : null,
+        selectedPet : {}
     };
     selectPet (pet){
         this.setState({ id : pet.id});
         this.fetchData(pet.id)
-    }
-    componentDidMount(){
-        this.fetchData();
     }
 
     fetchData = pet_id => {
@@ -30,11 +26,15 @@ export default class SelectBox extends Component {
             .then((resp) => {
                 return resp.json()
             })
-            .then(data => console.log(data))
+            .then(selectedPet => {
+                this.setState({ selectedPet : selectedPet});
+                // console.log(this.state.selectedPet);
+            })
             .catch((error) => {
                 console.log(error, "catch the hoop")
             })
     };
+
     render(){
         return(
             <div className="select-box">
@@ -48,6 +48,12 @@ export default class SelectBox extends Component {
                         <img src={require(`../assets/images/selectBox/${pet.img}`)} alt={pet.img}/>
                     </div>
                 )}
+                {this.state.selectedPet.hasOwnProperty('services') &&
+                    <Services
+                        selectedPet = {this.state.selectedPet}
+                    />
+                }
+
             </div>
         );
 
