@@ -1,0 +1,17 @@
+.select-box-services {
+  position: relative; }
+  .select-box-services-icons {
+    height: 80%;
+    align-items: center;
+    margin-top: unset; }
+  .select-box-services-icons:hover {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    transition: .5s all;
+    z-index: 10; }
+  .select-box-services-names {
+    position: relative;
+    bottom: 20%;
+    width: 60vw; }
+
+.select-box-animal-or-choose:hover {
+  transform: unset; }

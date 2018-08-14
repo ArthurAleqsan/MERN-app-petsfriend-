@@ -17,11 +17,12 @@ export default class Content extends Component {
             <HashRouter>
                 <div className="content">
                     <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/partners" component={Partners}/>
+                    <Route exact path="/about" component={About}/>
+                    <Route exact path="/partners" component={Partners}/>
                     <Route exact path="/shop" component={Shop}/>
                     <Route exact path="/sign-in" component={SignIn}/>
                     <Route exact path="/sign-up" component={SignUp}/>
+                    <Route exact path="/hash" component={SignUp}/>
                 </div>
             </HashRouter>
         )

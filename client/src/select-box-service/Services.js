@@ -4,32 +4,30 @@ import './Services.css';
 
 export default class Services extends Component {
     render() {
-        console.log(this.props)
-        // if (this.props.services.length > 0) {
+        console.log(this.props.selectedPet);
             return (
                 <div>
                     <div className="select-box-services select-box">
-                        {this.props.selectedPet.services.map(service =>
-                            <div className="select-box-services-icons">
+                       {this.props.selectedPet.icons.map(img =>
+                           <div className="select-box-services-icons" key={img}>
                                 <div>
-                                    <img src={require(`../assets/images/services-icons/${service.img}`)} alt={service.img}/>
+                                    <img src={require(`../assets/images/services-icons/${img}`)} alt={img}/>
                                 </div>
                             </div>
                         )}
-                        {/*<div className="select-box-services-icons">*/}
-                        {/*/!*<div>*!/*/}
-                        {/*<img src="{{icon}}" alt="">*/}
-                        {/*/!*</div>*!/*/}
-                        {/*</div>*/}
-                        {/*<div className="select-box-services-names">*/}
-                        {/*<div className="select-box-animal-or-choose">*/}
-                        {/*/!*<p >*!/*/}
-                        {/*/!*{{service}}*!/*/}
-                        {/*/!*</p>*!/*/}
-                        {/*</div>*/}
-                        {/*</div>*/}
+
+                    </div>
+                    <div className="select-box-services-names">
+                        {this.props.selectedPet.services.map(serviceName =>
+                            <div className="select-box-animal-or-choose" key={serviceName}>
+                                <p>
+                                    {serviceName}
+                                </p>
+                            </div>
+                        )}
                     </div>
                 </div>
+
             );
         // }
     }
