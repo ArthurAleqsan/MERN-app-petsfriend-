@@ -28,7 +28,6 @@ export default class SelectBox extends Component {
             })
             .then(selectedPet => {
                 this.setState({ selectedPet : selectedPet});
-                // console.log(this.state.selectedPet);
             })
             .catch((error) => {
                 console.log(error, "catch the hoop")

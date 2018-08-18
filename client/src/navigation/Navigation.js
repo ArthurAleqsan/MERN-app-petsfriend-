@@ -19,7 +19,7 @@ export default class Navigation extends Component {
                             <NavLink to='/partners' className="navigation-top-item">Partners</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/shop' className="navigation-top-item">Shop</NavLink>
+                            <NavLink to='/shops' className="navigation-top-item">Shop</NavLink>
                         </li>
                         <li>
                             <NavLink to='/sign-in' className="navigation-top-item">Sign In</NavLink>
